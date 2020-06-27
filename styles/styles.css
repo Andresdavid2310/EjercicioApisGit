@@ -19,10 +19,13 @@ header {
 
 header .logo {
   position: absolute;
-  top: 20px;
   left: 1%;
-  height: 40px;
-  width: auto;
+  height: 100px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  border-radius: 50%;
+  background-size: 100% auto;
   -ms-flex-line-pack: center;
       align-content: center;
   -webkit-box-pack: center;
@@ -67,7 +70,7 @@ header .menu ul li {
   width: 100%;
 }
 
-.hero .titulo h2 {
+.hero .titulo h1 {
   width: auto;
   margin-top: 3%;
   margin-left: 3%;
