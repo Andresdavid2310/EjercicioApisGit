@@ -34,3 +34,49 @@ let paragraph = `
      <strong>negrita</strong>
 `
 document.querySelector('.titulo p').innerHTML = paragraph
+
+
+// ejercicio 5
+
+/* Completar datos */
+/* Buscar 2 usuarios válidos en la */
+/* API de Github mediante una */
+/* función asíncrona y completar */
+/* para ambos su nombre y foto */
+let datos=[]
+const githubUsers = [
+     'calypsobronte ',
+     'marcewp15' 
+]
+const URL = 'https://api.github.com/users'
+
+let getUserGithubAsync = async(username) => {
+     try{
+          let response = await fetch(`${URL}/${username}`)
+          let data = await response.json()
+          console.log(data)
+          return data
+     }
+     catch(exeption){
+          console.log(exeption)
+          return exeption
+     }     
+}
+
+
+
+let images = document.querySelectorAll('.listimg')
+const TITTLES = document.querySelectorAll('.text h3')
+
+console.log(images)
+githubUsers.forEach(async (user, index) =>{
+     datos = await getUserGithubAsync(user)
+     let img = document.createElement('img')
+     img.src = datos.avatar_url
+     img.className = `"img${index+1}"`   
+     console.log(images[index])
+     console.log(img) 
+     TITTLES[index].innerHTML = datos.name
+     images[0].appendChild(img)  
+})
+

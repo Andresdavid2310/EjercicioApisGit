@@ -122,7 +122,7 @@ header .menu ul li {
           flex-direction: column;
 }
 
-.nameimg .img {
+.nameimg .listimg {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,7 +136,7 @@ header .menu ul li {
       align-content: center;
 }
 
-.nameimg .img img {
+.nameimg .listimg img {
   width: 400px;
   height: 400px;
   border-radius: 50%;
